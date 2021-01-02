@@ -9,15 +9,20 @@ block content
     table.table
             thead
                 tr
+                    th ID
                     th Name
                     th Price
-                    th Actions
+                    th Category
+                    th Details
+                    
 
             tbody
                 each product in products
                     tr
+                        td=product.id
                         td=product.name
                         td=product.price
-                        td
-                            a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
-                            a(href="/products/edit/"+product._id, class="btn btn-warning") Edit
+                        td=product.category
+                        td=product.details
+                        
+                           
